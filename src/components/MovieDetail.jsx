@@ -94,7 +94,7 @@ const MovieDetail = () => {
         { actorsToShow.filter(actor => actor.known_for_department === "Acting").map(actor => (
           <li key={ actor.id }>
             <div className='actor'>
-              <img src={ actor.profile_path ? `https://image.tmdb.org/t/p/w500${actor.profile_path}` : "./img/actor.png" } alt={ `${actor.name} photo` } />
+              <img src={ actor.profile_path ? `https://image.tmdb.org/t/p/w500${actor.profile_path}` : "/img/actor.png" } alt={ `${actor.name} photo` } />
               <p>{ actor.name } </p>
             </div>
           </li>
