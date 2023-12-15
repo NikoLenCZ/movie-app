@@ -5,7 +5,6 @@ import MovieDetail from './components/MovieDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { inject  } from '@vercel/analytics';
 
 
 function App() {
@@ -26,5 +25,3 @@ function App() {
 }
 
 export default App;
-
-inject();
