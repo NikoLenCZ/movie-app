@@ -5,6 +5,7 @@ import MovieDetail from './components/MovieDetail';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <RouterProvider router={ router } />
       <Footer />
       <SpeedInsights/>
+      <Analytics />
     </>
   );
 }
