@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 
+
 function App() {
 
   const router = createBrowserRouter([
@@ -19,8 +20,8 @@ function App() {
       <Header />
       <RouterProvider router={ router } />
       <Footer />
-      <SpeedInsights/>
       <Analytics />
+      <SpeedInsights/>
     </>
   );
 }
