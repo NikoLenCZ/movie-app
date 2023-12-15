@@ -1,0 +1,16 @@
+.movieList {
+  @apply max-w-6xl px-4 mx-auto w-full 2xl:max-w-7xl;
+}
+
+.movieCard a {
+  @apply grid relative place-items-center;
+}
+
+.movieCard a h3 {
+  @apply lg:absolute w-full h-full grid place-items-center lg:text-xl lg:font-bold text-indigo-50 lg:bg-black lg:bg-opacity-70 transition duration-300 ease-in-out lg:opacity-0 p-3;
+}
+
+.movieCard a:hover h3 {
+  @apply lg:opacity-100 lg:text-indigo-50 text-indigo-300;
+}
+

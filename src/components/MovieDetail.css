@@ -1,0 +1,67 @@
+.movieDetail {
+  @apply max-w-6xl mx-auto px-4 w-full 2xl:max-w-7xl;
+}
+
+
+.movieDetail h2 {
+  @apply md:px-4 text-4xl md:text-5xl font-bold mb-3 md:mt-8 mt-6 text-center;
+}
+
+.subtitle {
+  @apply text-xl text-center italic;
+
+} 
+
+.movieDetail h3 {
+  @apply text-3xl font-bold mt-2 mb-7 text-center;
+
+}
+
+.detailBox {
+  @apply flex flex-wrap items-center my-8;
+}
+
+.detailBox > img {
+  @apply w-full md:w-1/2;
+}
+
+.detailBox a {
+  @apply text-indigo-300 underline hover:text-indigo-500 transition-all duration-300 ease-out;
+
+}
+
+.detailBox > .detailDesc {
+  @apply w-full md:w-1/2 text-left py-4 md:p-8;
+}
+
+.detailDescription {
+  @apply max-w-2xl mx-auto mb-9;
+}
+
+.actorsList {
+  @apply list-disc list-inside sm:list-none grid sm:grid-cols-2 md:grid-cols-3 items-center;
+}
+
+.actor {
+  @apply inline-block sm:block max-w-xs sm:mx-auto p-0 sm:p-4;
+}
+
+.actor > img {
+  @apply hidden sm:block w-full rounded-full aspect-square object-cover object-center bg-[#444444];
+}
+
+.actor p {
+  @apply text-center my-1 sm:my-4;
+}
+
+.backLink {
+  @apply text-indigo-300 underline text-xl font-semibold hover:text-indigo-500 mb-10 mt-5 inline-block transition-all duration-300 ease-out;
+}
+
+img span#alttext-container {
+  @apply grid w-full  h-full place-items-center ;
+}
+
+.showActor {
+  @apply text-indigo-300 mt-2 sm:my-4 underline inline-block hover:text-indigo-500 transition-all duration-300 ease-out;
+}

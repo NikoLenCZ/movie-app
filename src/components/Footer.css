@@ -1,0 +1,7 @@
+footer {
+  @apply  text-white mt-auto bg-black py-10;
+}
+
+footer a {
+  @apply text-violet-300 underline hover:text-violet-400 transition-colors duration-300 ease-out;
+}

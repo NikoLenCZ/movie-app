@@ -1,0 +1,11 @@
+header {
+  @apply bg-black max-h-20 text-white text-start px-8 flex items-center justify-between;
+}
+
+header h1 {
+  @apply md:text-4xl text-2xl font-bold text-red-600 my-4 inline-block text-start;
+}
+
+header img {
+  @apply h-20 w-20 p-2;
+}
