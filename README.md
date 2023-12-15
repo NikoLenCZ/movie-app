@@ -34,7 +34,7 @@ API: TheMovieDb: https://developers.themoviedb.org/3/getting-started/introducti
 
 ## 👀 finální podoba:
 
-https://nikolencz.github.io/movie-app/
+[NikoLen Movie Vercel app](https://nikolen-movie-app.vercel.app/)
 
 ---
 
