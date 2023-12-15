@@ -20,7 +20,6 @@ function App() {
       <Header />
       <RouterProvider router={ router } />
       <Footer />
-      <Analytics />
       <SpeedInsights/>
     </>
   );
