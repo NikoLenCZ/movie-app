@@ -3,7 +3,11 @@
 }
 
 .movieCard a {
-  @apply grid relative place-items-center;
+  @apply grid relative place-items-center w-full h-full;
+}
+
+.movieCard img {
+  @apply aspect-video object-cover object-center;
 }
 
 .movieCard a h3 {

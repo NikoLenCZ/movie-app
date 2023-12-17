@@ -76,7 +76,7 @@ const MovieDetail = () => {
       <h2>{ movieDetail.title } ({ movieYear })</h2>
       <p className='subtitle'>{ movieDetail.tagline }</p>
       <div className='detailBox'>
-        <img src={ `https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}` } alt="movie poster" />
+      <img src={ movieDetail.backdrop_path ? `https://image.tmdb.org/t/p/w500${movieDetail.backdrop_path}` : '/img/movie.png' } alt="movie poster" />
         <div className='detailDesc'>
           <p>Genres: { genresString }</p>
           <p>User score: { userScore }%</p>

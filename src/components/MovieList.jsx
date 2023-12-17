@@ -49,7 +49,7 @@ const MovieList = () => {
           { filteredMovies.map(movie => (
             <li key={ movie.id } className="movieCard">
               <Link to={ `/movie/${movie.id}` }>
-                <img src={ `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` } alt="movie poster" />
+                <img src={ movie.backdrop_path ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : '/img/movie.png' } alt="movie poster" />
                 <h3>{ movie.title }</h3>
               </Link>
             </li>

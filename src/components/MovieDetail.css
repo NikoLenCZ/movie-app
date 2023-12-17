@@ -22,7 +22,7 @@
 }
 
 .detailBox > img {
-  @apply w-full md:w-1/2;
+  @apply w-full md:w-1/2 aspect-video object-cover object-center;
 }
 
 .detailBox a {
