@@ -2,12 +2,16 @@
   @apply max-w-6xl px-4 mx-auto w-full 2xl:max-w-7xl;
 }
 
+.movieCard {
+  @apply overflow-hidden;
+}
+
 .movieCard a {
   @apply grid relative place-items-center w-full h-full;
 }
 
 .movieCard img {
-  @apply aspect-video object-cover object-center;
+  @apply aspect-video object-cover object-center transition-all duration-300 ease-in-out;
 }
 
 .movieCard a h3 {
@@ -18,3 +22,6 @@
   @apply lg:opacity-100 lg:text-indigo-50 text-indigo-300;
 }
 
+.movieCard a:hover img {
+  @apply lg:scale-110;
+}

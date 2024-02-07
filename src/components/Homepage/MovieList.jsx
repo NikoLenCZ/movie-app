@@ -1,6 +1,8 @@
 import './MovieList.css';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import MovieSearch from './MovieSearch';
+import { Thumbnail } from './Thumbnail';
 
 
 const MovieList = () => {
@@ -10,14 +12,16 @@ const MovieList = () => {
   const [error, setError] = useState(null);
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
-
-  const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(query.toLowerCase()));
+  const URL_API = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+  const URL_SEARCH = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
 
   const getMovies = async () => {
+
     setLoading(true);
     try
     {
-      const response = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`);
+      let url = query ? URL_SEARCH : URL_API;
+      const response = await fetch(url);
       const json = await response.json();
       setMovies(json.results);
     } catch (error)
@@ -32,7 +36,7 @@ const MovieList = () => {
 
   useEffect(() => {
     getMovies();
-  }, []);
+  }, [query, apiKey]);
 
   if (loading) return <p>Loading data...</p>;
   if (error) return <p>Error: { error }</p>;
@@ -40,13 +44,10 @@ const MovieList = () => {
 
   return (
     <div className='movieList'>
-      <div className='searchBox'>
-        <label htmlFor="searchMovie">Search movie: </label>
-        <input value={ query } onChange={ e => setQuery(e.target.value) } id="searchMovie" className="serachInput" type="search" />
-      </div>
+    {/* <MovieSearch query={ query } setQuery={ setQuery } /> */}
       { movies.length > 0 ? (
         <ul className="movieWrapper">
-          { filteredMovies.map(movie => (
+          { movies.map(movie => (
             <li key={ movie.id } className="movieCard">
               <Link to={ `/movie/${movie.id}` }>
                 <img src={ movie.backdrop_path ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : '/img/movie.png' } alt="movie poster" />
@@ -57,7 +58,6 @@ const MovieList = () => {
         </ul>
       ) : null }
     </div>
-
   );
 };
 

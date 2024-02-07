@@ -1,0 +1,11 @@
+.searchBox {
+  @apply my-4 md:my-8;
+}
+
+.searchInput {
+  @apply w-full md:max-w-lg md:my-8 p-2 text-lg rounded mt-3 mb-4;
+}
+
+label {
+  @apply mr-4 text-xl text-white;
+}
