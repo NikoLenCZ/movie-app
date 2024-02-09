@@ -1,4 +1,3 @@
-import React from 'react';
 import './MovieSearch.css';
 
 const MovieSearch = ({ query, setQuery }) => {

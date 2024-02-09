@@ -1,11 +1,10 @@
 import './MovieList.css';
-import { useState } from "react";
 import Thumbnail from './Thumbnail';
 import useMovies from '../hooks/useMovies';
 
 
-const MovieList = () => {
-  const [query] = useState('');
+const MovieList = ({ query }) => {
+  
   const { movies, loading, error } = useMovies(query);
 
   if (loading) return <p>Loading data...</p>;

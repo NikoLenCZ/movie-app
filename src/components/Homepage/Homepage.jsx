@@ -8,7 +8,7 @@ export const Homepage = () => {
   return (
     <>
       <MovieSearch query={ query } setQuery={ setQuery } />
-      <MovieList />
+      <MovieList query={query} />
     </>
   )
 }
