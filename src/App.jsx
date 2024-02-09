@@ -1,25 +1,21 @@
-import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MovieList from './components/Homepage/MovieList';
 import MovieDetail from './components/DetailPage/MovieDetail';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import MovieSearch from './components/Homepage/MovieSearch';
+import Header from './components/General/Header';
+import Footer from './components/General/Footer';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { useState } from "react";
+import { Homepage } from './components/Homepage/Homepage';
 
 function App() {
-  const [query, setQuery] = useState('');
+
 
   const router = createBrowserRouter([
-    { path: "/", element: <MovieList /> },
+    { path: "/", element: <Homepage /> },
     { path: "/movie/:id", element: <MovieDetail /> },
   ]);
 
   return (
     <>
       <Header />
-      <MovieSearch query={ query } setQuery={ setQuery } />
       <RouterProvider router={ router } />
       <Footer />
       <SpeedInsights/>
