@@ -17,7 +17,7 @@
 }
 
 #root {
-  @apply grid text-center w-full my-0;
+  @apply flex flex-col text-center w-full my-0;
 }
 
 

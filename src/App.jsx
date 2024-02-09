@@ -1,16 +1,17 @@
-import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MovieList from './components/MovieList';
-import MovieDetail from './components/MovieDetail';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import MovieDetail from './components/DetailPage/MovieDetail';
+import Header from './components/General/Header';
+import Footer from './components/General/Footer';
+import { Homepage } from './components/Homepage/Homepage';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function App() {
 
+
   const router = createBrowserRouter([
-    { path: "/", element: <MovieList /> },
+    { path: "/", element: <Homepage /> },
     { path: "/movie/:id", element: <MovieDetail /> },
   ]);
 
@@ -20,6 +21,7 @@ function App() {
       <RouterProvider router={ router } />
       <Footer />
       <SpeedInsights/>
+      <Analytics />
     </>
   );
 }
