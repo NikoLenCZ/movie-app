@@ -1,5 +1,5 @@
 .searchBox {
-  @apply my-4 md:my-8;
+  @apply my-4 md:my-0 px-4;
 }
 
 .searchInput {

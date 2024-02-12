@@ -2,19 +2,12 @@
   @apply max-w-6xl mx-auto px-4 w-full 2xl:max-w-7xl;
 }
 
-
-.movieDetail h2 {
-  @apply md:px-4 text-4xl md:text-5xl font-bold mb-3 md:mt-8 mt-6 text-center;
-}
-
 .subtitle {
   @apply text-xl text-center italic;
-
-} 
+}
 
 .movieDetail h3 {
   @apply text-3xl font-bold mt-2 mb-7 text-center;
-
 }
 
 .detailBox {
@@ -27,7 +20,6 @@
 
 .detailBox a {
   @apply text-indigo-300 underline hover:text-indigo-500 transition-all duration-300 ease-out;
-
 }
 
 .detailBox > .detailDesc {
@@ -59,7 +51,7 @@
 }
 
 img span#alttext-container {
-  @apply grid w-full  h-full place-items-center ;
+  @apply grid w-full  h-full place-items-center;
 }
 
 .showActor {

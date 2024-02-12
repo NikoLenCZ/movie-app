@@ -1,0 +1,3 @@
+h2.main__title {
+  @apply md:px-4 text-4xl md:text-5xl font-bold mb-3 md:mt-12 mt-6 text-center;
+}
